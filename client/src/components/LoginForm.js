@@ -71,8 +71,8 @@ const LoginForm = () => {
             type="text"
             placeholder="Your email"
             name="email"
-            onChange={handleChange}
-            value={formState.email}
+            onChange={handleInputChange}
+            value={userFormData.email}
             required
           />
           <Form.Control.Feedback type="invalid">
@@ -86,8 +86,8 @@ const LoginForm = () => {
             type="password"
             placeholder="Your password"
             name="password"
-            onChange={handleChange}
-            value={formState.password}
+            onChange={handleInputChange}
+            value={userFormData.password}
             required
           />
           <Form.Control.Feedback type="invalid">
@@ -95,7 +95,7 @@ const LoginForm = () => {
           </Form.Control.Feedback>
         </Form.Group>
         <Button
-          disabled={!(formState.email && formState.password)}
+          disabled={!(userFormData.email && userFormData.password)}
           type="submit"
           variant="success"
         >
